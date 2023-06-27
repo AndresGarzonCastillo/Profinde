@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logoProfinde.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>ProfesionalesYa</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img class="logo-img" src="profindeLogo.png" alt="Logo Profinde">
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img class="menuIcono" src="menu.png" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="registro.html">Unirme</a></li>
+                    <li><a href="inicioSesion.html">Ingresar</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="headerContent container">
+            <div class="headerText">
+                <h1><strong>PROFINDE</strong></h1>
+            </div>
+        </div>
+    </header>
+    <section class="registroContainer">
+        <div>
+            <label for="">Registro de usuario</label>
+        </div>
+    </section>
+    <section class="servicios">
+        <div id="ContenedorItemCarrusel">
+            <div class="itemCarrusel" id="itemCarrusel1">
+                <div class="tarjetaCarrusel" id="primerTarjeta">
+                    <div class="card">
+                        <div class="card body">
+                            <form name="registro1" class="formContainer" onsubmit="return validarFormulario()"
+                                class="error-message">
+                                <div class="inputGroup">
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-user"></i>
+                                        <input type="text" name="nombres" id="nombres" placeholder="Nombres">
+                                        <div id="errorNombres">Ingrese sus nombres</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-user"></i>
+                                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                                        <div id="errorApellidos">Ingrese sus apellidos</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input type="email" name="email" id="email" placeholder="Email">
+                                        <div id="errorEmail">Ingrese un correo electronico</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-mobile-screen-button"></i>
+                                        <input type="number" name="celular" id="celular" placeholder="Numero de Celular">
+                                        <div id="errorCelular">Ingrese un numero celular de 10 digitos</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                                        <div id="errorPassword">Ingrese contraseña con minimo 8 caracteres<br>minimo una
+                                            mayuscula y un numero</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechasCarrusel">
+                    <a href="#itemCarrusel3">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrusel2">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrusel" id="itemCarrusel2">
+                <div class="tarjetaCarrusel" id="segundaTarjeta">
+                    <div class="card">
+                        <div class="card body">
+                            <form name="registro2" class="formContainer" onsubmit="return validarFormulario()">
+                                <div class="inputGroup">
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-id-card"></i>
+                                        <select name="tipoDoc" id="tipoDoc">
+                                            <option selected disabled value="">Tipo de documento</option>
+                                            <option>Cedula colombiana</option>
+                                            <option>Cedula de extranjeria</option>
+                                            <option>Pasaporte</option>
+                                        </select>
+                                        <div id="errorTipoDoc">Elije tipo de documento</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-id-card"></i>
+                                        <input type="text" name="numDoc" id="numDoc" placeholder="Numero de documento">
+                                        <div id="errorDocumento">Ingrese numero de documento</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <input type="text" name="direccion" id="direccion" placeholder="Direccion de residencia">
+                                        <div id="errorDireccion">Ingrese su direccion</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-city"></i>
+                                        <select name="ciudad" id="ciudad">
+                                            <option selected disabled value="">Ciudad de localia</option>
+                                            <option>Bogota</option>
+                                            <option>Medellin</option>
+                                            <option>Cali</option>
+                                        </select>
+                                        <div id="errorCiudad">Elija su ciudad de localia</div>
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <label for="fecha">Fecha de nacimiento</label><br><br>
+                                        <input type="date" id="fecha" name="fecha" onchange="validarFechaNacimiento()">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechasCarrusel">
+                    <a href="#itemCarrusel1">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrusel3">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrusel" id="itemCarrusel3">
+                <div class="tarjetaCarrusel" id="tercerTarjeta">
+                    <div class="card">
+                        <div class="card body">
+                            <form id="registro3" class="formContainer" onsubmit="return validarFormulario()">
+                                <div class="inputGroup">
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-user"></i>
+                                        <label for="foto1">Subir foto Cedula frontal:</label>
+                                        <input type="file" id="foto1" name="foto1">
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-user"></i>
+                                        <label for="foto2">Subir foto Cedula traversa:</label>
+                                        <input type="file" id="foto2" name="foto2">
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <label for="foto3">Subir foto de su rostro:</label>
+                                        <input type="file" id="foto3" name="foto3">
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <label for="foto4">Subir foto con cedula en mano:</label>
+                                        <input type="file" id="foto4" name="foto4">
+                                    </div>
+                                    <div class="inputField">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <input class="checkbox" id="termsCheckbox" type="checkbox" id="foto" name="foto">
+                                        <label for="termsCheckbox">Acepto terminos, condiciones <br>y politicas de privacidad</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechasCarrusel">
+                    <a href="#itemCarrusel2">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrusel1">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="botonContenedor">
+        <div>
+            <a href="inicioSesion.html">
+                <button class="button" onsubmit="return validarFormulario()">Registrarme</button>
+            </a>
+        </div>
+    </section>
+    <footer class="footer container">
+        <a class="logo" href="index.html">
+            <img class="logo-img" src="profindeLogo.png" alt="Logo Profinde">
+        </a>
+        <div class="link">
+            <a href="registro.html">Trabaja con Nosotros</a>
+            <a href="">Quienes Somos</a>
+            <a href="">Contactenos</a>
+            <a href="">Terminos y Condiciones</a>
+            <a href="">Politicas de Privacidad</a>
+        </div>
+        <div class="socialLink">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="registro.js" async></script>
+</body>
+
+</html>
