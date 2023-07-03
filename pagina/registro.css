@@ -1,0 +1,229 @@
+.formContainer {
+    position: relative;
+    z-index: 9999;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}
+
+#ContenedorItemCarrusel {
+    background-image: url(paginaProfinde.png);
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    z-index: 1;
+}
+
+#registro3 {
+    font-size: 12px;
+}
+
+.card {
+    background-color: #7cd2fd;
+    border-radius: 0px;
+    width: 20rem;
+    box-shadow: 3px 5px 2.5px grey;
+    border-radius: 10px;
+}
+
+.inputField {
+    margin: 15px;
+}
+
+.registroContainer {
+    background: white;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.servicios {
+    background: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#ContenedorItemCarrusel {
+    height: 420px;
+    overflow: hidden;
+}
+
+.servicios .itemCarrusel .tarjetaCarrusel .formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.servicios .itemCarrusel {
+    height: 450px;
+    position: relative;
+    display: flex;
+    /* Agregado */
+    justify-content: center;
+    /* Agregado */
+}
+
+.servicios .tarjetaCarrusel {
+    position: relative;
+    height: 100%;
+    display: flex;
+    /* Agregado */
+    align-items: center;
+    /* Agregado */
+}
+
+.servicios .tarjetaCarrusel .formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* Agregado */
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.botonContenedor {
+    background: white;
+    padding-left: 47%;
+    padding-top: 35px;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    background-color: #7cd2fd;
+    color: #363f50;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #7cd2fd;
+    color: white;
+}
+
+.button:hover {
+    background-color: #45aaf2;
+}
+
+.servicios .itemCarrusel {
+    height: 450px;
+    position: relative;
+}
+
+.servicios .tarjetaCarrusel {
+    position: relative;
+    height: 100%;
+}
+
+.servicios .tarjetaCarrusel .textoCarrusel {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: black;
+    color: #fff;
+    z-index: 2;
+}
+
+.servicios .tarjetaCarrusel .textoCarrusel h5,
+.servicios .tarjetaCarrusel .textoCarrusel p {
+    margin: 5px 0;
+}
+
+.servicios .tarjetaCarrusel img {
+    width: 100%;
+    height: 100%;
+}
+
+.servicios .flechasCarrusel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+}
+
+.checkbox {
+    margin: 10px;
+}
+
+@media(max-width:900px) {
+    .servicios {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #ContenedorItemCarrusel {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .cardBody {
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    #foto1 {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 8px;
+    }
+
+    #foto2 {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 8px;
+    }
+
+    #foto3 {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 8px;
+    }
+
+    #foto4 {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 8px;
+    }
+
+    #documents {
+        font-size: 12px;
+    }
+
+    .textoCarrusel {
+        font-size: 12px;
+    }
+
+}
